@@ -1,2 +1,2 @@
 # godan
-Some data structures implementation in golang
+Data structures implementation in golang
