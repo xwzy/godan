@@ -84,3 +84,12 @@ func main () {
     bitmap.Exist(1532) // false)
 }
 ```
+
+
+
+## What does godan mean?
+'Godan' is pronunced like "狗蛋" (Dog egg) in chinese, which is happen to be the name of my son.
+
+![](doc/img/godan.png)
+
+
