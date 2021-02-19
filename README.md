@@ -1,6 +1,17 @@
 # godan
 Data structures implementation in golang.
 
+- [x] Bloom Filter
+- [x] Ring Buffer
+- [x] Counter
+- [x] Bitmap
+- [ ] Skip List
+- [ ] LRU/LFU
+
+- [ ] Stack
+- [ ] Queue
+- [ ] Heap
+
 > ⚠️⚠️ The following examples are all use default constructors for simplicity, and you should specify parameters by using NewXXX().  
 
 ## Bloom Filter
