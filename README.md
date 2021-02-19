@@ -88,7 +88,7 @@ func main () {
 
 
 ## What does godan mean?
-'Godan' is pronunced like "狗蛋" (Dog egg) in chinese, which is happen to be the name of my son.
+'Godan' is pronounced like "狗蛋" (Dog egg) in Chinese, which happens to be the name of my son.
 
 ![](doc/img/godan.png)
 
