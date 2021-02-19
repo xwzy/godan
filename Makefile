@@ -1,7 +1,8 @@
 build:
 ifeq ($(OS),Windows_NT)
+
 else
-	go build -o bin/snowflake cmd/tests/snowflake/main.go
+	go build -o bin/exec cmd/main.go
 endif
 
 #run:
