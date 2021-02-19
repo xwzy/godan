@@ -1,7 +1,11 @@
 # godan
-Data structures implementation in golang
+Data structures implementation in golang.
+
+> ⚠️⚠️ The following examples are all use default constructors for simplicity, and you should specify parameters by using NewXXX().  
 
 ## Bloom Filter
+> 🚀 Check out murmur on [github.com/spaolacci/murmur3](github.com/spaolacci/murmur3) for a better hash function
+
 ### Simple Bloom Filter for number
 ```go
 import "github.com/xwzy/godan/bloomfilter"
