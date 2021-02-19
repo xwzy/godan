@@ -5,8 +5,15 @@ import (
 	"testing"
 )
 
+func TestBitMap_Set(t *testing.T) {
+	bitmap := NewBitMap(1230600)
+	bitmap.Set(1532)
+
+	assert.Equal(t, bitmap.Exist(1532), true)
+}
+
 func TestBitMap(t *testing.T) {
-	bitmap := NewBitMap(12306)
+	bitmap := NewBitMap(1230600)
 	bitmap.Set(1532)
 
 	assert.Equal(t, bitmap.Exist(1532), true)

@@ -2,6 +2,18 @@ package assert
 
 import "testing"
 
+func True(t *testing.T, a interface{}) {
+	if a != true {
+		t.Fatalf("%s != true", a)
+	}
+}
+
+func False(t *testing.T, a interface{}) {
+	if a != false {
+		t.Fatalf("%s != false", a)
+	}
+}
+
 func Equal(t *testing.T, a interface{}, b interface{}) {
 	if a != b {
 		t.Fatalf("%s != %s", a, b)
