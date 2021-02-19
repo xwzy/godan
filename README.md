@@ -61,7 +61,7 @@ import "log"
 func main () {
     counter := DefaultCounter()
     
-    // count in coming query
+    // count in-coming query
     c.CountOne()
     
     // get the query count
