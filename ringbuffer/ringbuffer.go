@@ -60,8 +60,8 @@ func (rb *RingBuffer) Read(size uint64) []interface{} {
 		data = append(data, rb.data[curPos-size:curPos]...)
 	} else {
 		remain := size - rb.pos
-		data = append(data, rb.data[:curPos]...)
 		data = append(data, rb.data[rb.size-remain:]...)
+		data = append(data, rb.data[:curPos]...)
 	}
 	return data
 }

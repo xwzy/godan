@@ -11,17 +11,17 @@ func TestRingBuffer(t *testing.T) {
 	for i := 0; i < 5; i++ {
 		buffer.Write(i)
 	}
-	assert.SliceEqual(t, buffer.ReadAll(), []interface{}{0, 1, 2, 3, 4, nil, nil, nil, nil, nil})
+	assert.SliceEqual(t, buffer.ReadAll(), []interface{}{nil, nil, nil, nil, nil, 0, 1, 2, 3, 4})
 
 	for i := 5; i < 17; i++ {
 		buffer.Write(i)
 	}
-	assert.SliceEqual(t, buffer.ReadAll(), []interface{}{10, 11, 12, 13, 14, 15, 16, 7, 8, 9})
+	assert.SliceEqual(t, buffer.ReadAll(), []interface{}{7, 8, 9, 10, 11, 12, 13, 14, 15, 16})
 
 	for i := 50; i < 58; i++ {
 		buffer.Write(i)
 	}
-	assert.SliceEqual(t, buffer.ReadAll(), []interface{}{53, 54, 55, 56, 57, 15, 16, 50, 51, 52})
+	assert.SliceEqual(t, buffer.ReadAll(), []interface{}{15, 16, 50, 51, 52, 53, 54, 55, 56, 57})
 
 	//t.Log(buffer.ReadAll())
 }
