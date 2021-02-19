@@ -5,6 +5,7 @@ Data structures implementation in golang
 ### Simple Bloom Filter for number
 ```go
 import "github.com/xwzy/godan/bloomfilter"
+
 func main() {
     bloomFilter := DefaultNumberBloomFilter()
     
@@ -17,6 +18,7 @@ func main() {
 ### Simple Bloom Filter for string
 ```go
 import "github.com/xwzy/godan/bloomfilter"
+
 func main() {
     bloomFilter := DefaultStringBloomFilter()
     
@@ -29,6 +31,7 @@ func main() {
 ## Ring Buffer
 ```go
 import "github.com/xwzy/godan/ringbuffer"
+
 func main() {
     buffer := NewRingBuffer(10)
     
@@ -69,6 +72,7 @@ func main () {
 ## Bitmap
 ```go
 import "github.com/xwzy/godan/bitmap"
+
 func main () {
     bitmap := NewBitMap(1000000) 
     // set the number of bit position
