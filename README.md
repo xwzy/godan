@@ -5,12 +5,16 @@ Data structures implementation in golang.
 - [x] Ring Buffer
 - [x] Counter
 - [x] Bitmap
-- [ ] Skip List
-- [ ] Priority Queue (FIFO/LRU/LFU)
-
 - [ ] Stack
 - [ ] Queue
 - [ ] Heap
+- [ ] Priority Queue (FIFO / LRU / LFU)
+- [ ] Trie
+- [ ] Skip List
+- [ ] B Tree
+- [ ] B+ Tree
+- [ ] AVL Tree
+- [ ] RBTree
 
 > ⚠️⚠️ The following examples are all use default constructors for simplicity, and you should specify parameters by using NewXXX().  
 
