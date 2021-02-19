@@ -6,7 +6,7 @@ Data structures implementation in golang.
 - [x] Counter
 - [x] Bitmap
 - [ ] Skip List
-- [ ] LRU/LFU
+- [ ] Priority Queue (FIFO/LRU/LFU)
 
 - [ ] Stack
 - [ ] Queue
