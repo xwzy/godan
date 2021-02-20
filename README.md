@@ -8,7 +8,7 @@ Data structures implementation in golang.
 - [ ] Stack
 - [ ] Queue
 - [ ] Heap
-- [ ] Priority Queue (FIFO / LRU / LFU)
+- [ ] Cache (FIFO / LRU / LFU)
 - [ ] Trie
 - [ ] Skip List
 - [ ] B Tree
