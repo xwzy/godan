@@ -32,7 +32,7 @@ func main() {
     bloomFilter := bloomfilter.DefaultNumberBloomFilter()
     
     bloomFilter.Set((uint64)(100))
-    bloomFilter.Exist((uint64)(100) // true
+    bloomFilter.Exist((uint64)(100)  // true
     bloomFilter.Exist((uint64)(1124) // false
 }
 ```
@@ -71,7 +71,7 @@ func main() {
         buffer.Write(i)
     }
     buffer.ReadAll() // 15, 16, 50, 51, 52, 53, 54, 55, 56, 57
-    buffer.Read(3) // 55, 56, 57
+    buffer.Read(3)   // 55, 56, 57
 }
 ```
 
@@ -100,10 +100,80 @@ func main () {
     // set the number of bit position
     bitmap.Set(1532)
     bitmap.Exist(1532) // true
-    bitmap.Exist(532) // false
+    bitmap.Exist(532)  // false
     
     bitmap.Delete(1532)
     bitmap.Exist(1532) // false)
+}
+```
+
+## Stack
+```go
+import "github.com/xwzy/godan/stack"
+
+func main()  {
+    s := stack.DefaultStack()
+    s.Push(123)
+    s.Top()       // 123
+    s.Pop()
+}
+```
+
+## Queue
+```go
+import "github.com/xwzy/godan/queue"
+
+func main()  {
+    q := queue.NewQueue()
+    q.Push(111)
+    q.Push(222)
+    q.Front()    // 111
+    q.Back()     // 222
+    q.Pop()
+    q.Pop()
+    q.Empty()    // true
+}
+```
+
+## Deque
+```go
+import "github.com/xwzy/godan/deque"
+
+func main()  {
+    q := deque.NewDeque()
+    q.PushBack(222)
+    q.PushFront(111)
+    q.Front()    // 111
+    q.Back()     // 222
+    q.PopFront()
+    q.PopBack()
+    q.Empty()    // true
+}
+```
+
+## Vector
+```go
+import "github.com/xwzy/godan/vector"
+
+func main()  {
+    vec := vector.DefaultVector()
+    vec.PushBack(111)
+    vec.Back()    // 111
+    vec.PushBack(222)
+    vec.At(0)     // 111
+    vec.At(1)     // 222
+    
+    vec.Set(0, 333)
+    vec.At(0)     // 333
+    
+    vec.SwapPosition(0, 1)
+    vec.At(0)     // 222
+    vec.At(1)     // 333
+    
+    vec.PopBack()
+    vec.Empty()   // false
+    vec.Clear()
+    vec.Empty()   // true
 }
 ```
 
@@ -114,17 +184,17 @@ import "github.com/xwzy/godan/trie"
 func main() {
     tree := trie.DefaultTrie()
     tree.Insert("hello")
-    tree.Search("hello") // true
+    tree.Search("hello")   // true
     tree.Search("hellooo") // false
-    tree.Search("hel") // false
-    tree.StartsWith("hel") //true
+    tree.Search("hel")     // false
+    tree.StartsWith("hel") // true
 
     // support Unicode string
     tree.Insert("你好")
-    tree.Search("你好") // true
-    tree.Search("你好啊") // false
-    tree.Search("你") // false
-    tree.StartsWith("你") //true
+    tree.Search("你好")     // true
+    tree.Search("你好啊")   // false
+    tree.Search("你")      // false
+    tree.StartsWith("你")  // true
 }
 ```
 
