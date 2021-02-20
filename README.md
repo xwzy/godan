@@ -19,7 +19,7 @@ Data structures implementation in golang.
 - [ ] AVL Tree
 - [ ] RBTree
 
-> ⚠️⚠️ Some following examples are use default constructors for simplicity, you should specify parameters by using NewXXX().  
+> ⚠️⚠️  Some following examples are use default constructors for simplicity, you should specify parameters by using NewXXX().  
 
 ## Bloom Filter
 > 🚀 Check out murmur on [github.com/spaolacci/murmur3](github.com/spaolacci/murmur3) for a better hash function
@@ -29,11 +29,11 @@ Data structures implementation in golang.
 import "github.com/xwzy/godan/bloomfilter"
 
 func main() {
-    bloomFilter := bloomfilter.DefaultNumberBloomFilter()
+    b := bloomfilter.DefaultNumberBloomFilter()
     
-    bloomFilter.Set((uint64)(100))
-    bloomFilter.Exist((uint64)(100)  // true
-    bloomFilter.Exist((uint64)(1124) // false
+    b.Set((uint64)(100))
+    b.Exist((uint64)(100)  // true
+    b.Exist((uint64)(1124) // false
 }
 ```
 
@@ -42,11 +42,11 @@ func main() {
 import "github.com/xwzy/godan/bloomfilter"
 
 func main() {
-    bloomFilter := bloomfilter.DefaultStringBloomFilter()
+    b := bloomfilter.DefaultStringBloomFilter()
     
-    bloomFilter.Set("test0001")
-    bloomFilter.Exist("test001") // true
-    bloomFilter.Exist("test100") // false
+    b.Set("test0001")
+    b.Exist("test001") // true
+    b.Exist("test100") // false
 }
 ```
 
@@ -81,13 +81,11 @@ import "github.com/xwzy/godan/counter"
 import "log"
 
 func main () {
-    counter := counter.DefaultCounter()
-    
+    c := counter.DefaultCounter()
     // count in-coming query
     c.CountOne()
-    
     // get the query count
-    counter.GetTotal()
+    c.GetTotal()
 }
 ```
 
@@ -96,14 +94,14 @@ func main () {
 import "github.com/xwzy/godan/bitmap"
 
 func main () {
-    bitmap := bitmap.NewBitMap(1000000) 
+    b := bitmap.NewBitMap(1000000) 
     // set the number of bit position
-    bitmap.Set(1532)
-    bitmap.Exist(1532) // true
-    bitmap.Exist(532)  // false
+    b.Set(1532)
+    b.Exist(1532) // true
+    b.Exist(532)  // false
     
-    bitmap.Delete(1532)
-    bitmap.Exist(1532) // false)
+    b.Delete(1532)
+    b.Exist(1532) // false)
 }
 ```
 
