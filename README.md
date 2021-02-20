@@ -1,16 +1,16 @@
 # godan
 Data structures implementation in golang.
 
-- [x] Bloom Filter
-- [x] Ring Buffer
-- [x] Counter
-- [x] Bitmap
+- [x] Bloom Filter (Thread Safe)
+- [x] Ring Buffer (A buffer store the most recent data) (Thread Safe)
+- [x] Counter (Count query number in a rate limiter) (Thread Safe)
+- [x] Bitmap (Thread Safe)
 - [x] Stack
 - [x] Queue
-- [ ] Deque
-- [ ] Vector
+- [x] Deque
+- [x] Vector
 - [ ] List
-- [ ] Heap
+- [ ] Heap / Priority Queue
 - [ ] Cache (FIFO / LRU / LFU)
 - [ ] Trie
 - [ ] Skip List
