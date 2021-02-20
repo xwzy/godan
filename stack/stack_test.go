@@ -7,6 +7,8 @@ import (
 
 func TestNewStack(t *testing.T) {
 	stack := DefaultStack()
+	assert.True(t, stack.Empty())
+	assert.Equal(t, stack.Size(), 0)
 
 	stack.Push(12345)
 	assert.Equal(t, stack.Top(), 12345)
