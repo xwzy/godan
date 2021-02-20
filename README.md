@@ -5,8 +5,11 @@ Data structures implementation in golang.
 - [x] Ring Buffer
 - [x] Counter
 - [x] Bitmap
-- [ ] Stack
+- [x] Stack
 - [ ] Queue
+- [ ] Deque
+- [ ] Vector
+- [ ] List
 - [ ] Heap
 - [ ] Cache (FIFO / LRU / LFU)
 - [ ] Trie
