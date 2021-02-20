@@ -19,7 +19,7 @@ Data structures implementation in golang.
 - [ ] AVL Tree
 - [ ] RBTree
 
-> ⚠️⚠️ The following examples are all use default constructors for simplicity, and you should specify parameters by using NewXXX().  
+> ⚠️⚠️ Some following examples are use default constructors for simplicity, you should specify parameters by using NewXXX().  
 
 ## Bloom Filter
 > 🚀 Check out murmur on [github.com/spaolacci/murmur3](github.com/spaolacci/murmur3) for a better hash function
@@ -124,7 +124,7 @@ func main()  {
 import "github.com/xwzy/godan/queue"
 
 func main()  {
-    q := queue.NewQueue()
+    q := queue.DefaultQueue()
     q.Push(111)
     q.Push(222)
     q.Front()    // 111
@@ -140,7 +140,7 @@ func main()  {
 import "github.com/xwzy/godan/deque"
 
 func main()  {
-    q := deque.NewDeque()
+    q := deque.DefaultDeque()
     q.PushBack(222)
     q.PushFront(111)
     q.Front()    // 111
