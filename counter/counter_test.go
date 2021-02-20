@@ -26,7 +26,8 @@ func TestCounter(t *testing.T) {
 	}
 	t.Log("Start finish all\n")
 
-	select {}
+	time.Sleep(time.Second * 10)
+	//select {}
 }
 
 func request1000timeEvery1s(c *Counter) {

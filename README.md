@@ -6,7 +6,7 @@ Data structures implementation in golang.
 - [x] Counter
 - [x] Bitmap
 - [x] Stack
-- [ ] Queue
+- [x] Queue
 - [ ] Deque
 - [ ] Vector
 - [ ] List

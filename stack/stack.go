@@ -26,7 +26,7 @@ func (s *Stack) Push(elem interface{}) {
 
 func (s *Stack) Pop() {
 	if !s.Empty() {
-		s.data = s.data[:len(s.data)-1]
+		s.data = s.data[:s.Size()-1]
 	}
 }
 
@@ -34,5 +34,5 @@ func (s *Stack) Top() interface{} {
 	if s.Empty() {
 		return nil
 	}
-	return s.data[len(s.data)-1]
+	return s.data[s.Size()-1]
 }
