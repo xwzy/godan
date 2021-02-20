@@ -12,7 +12,7 @@ Data structures implementation in golang.
 - [ ] List
 - [ ] Heap / Priority Queue
 - [ ] Cache (FIFO / LRU / LFU)
-- [ ] Trie
+- [x] Trie (Thread Safe)
 - [ ] Skip List
 - [ ] B Tree
 - [ ] B+ Tree
@@ -29,7 +29,7 @@ Data structures implementation in golang.
 import "github.com/xwzy/godan/bloomfilter"
 
 func main() {
-    bloomFilter := DefaultNumberBloomFilter()
+    bloomFilter := bloomfilter.DefaultNumberBloomFilter()
     
     bloomFilter.Set((uint64)(100))
     bloomFilter.Exist((uint64)(100) // true
@@ -42,7 +42,7 @@ func main() {
 import "github.com/xwzy/godan/bloomfilter"
 
 func main() {
-    bloomFilter := DefaultStringBloomFilter()
+    bloomFilter := bloomfilter.DefaultStringBloomFilter()
     
     bloomFilter.Set("test0001")
     bloomFilter.Exist("test001") // true
@@ -55,7 +55,7 @@ func main() {
 import "github.com/xwzy/godan/ringbuffer"
 
 func main() {
-    buffer := NewRingBuffer(10)
+    buffer := ringbuffer.NewRingBuffer(10)
     
     for i := 0; i < 5; i++ {
         buffer.Write(i)
@@ -81,7 +81,7 @@ import "github.com/xwzy/godan/counter"
 import "log"
 
 func main () {
-    counter := DefaultCounter()
+    counter := counter.DefaultCounter()
     
     // count in-coming query
     c.CountOne()
@@ -96,7 +96,7 @@ func main () {
 import "github.com/xwzy/godan/bitmap"
 
 func main () {
-    bitmap := NewBitMap(1000000) 
+    bitmap := bitmap.NewBitMap(1000000) 
     // set the number of bit position
     bitmap.Set(1532)
     bitmap.Exist(1532) // true
@@ -107,7 +107,26 @@ func main () {
 }
 ```
 
+## Trie
+```go
+import "github.com/xwzy/godan/trie"
 
+func main() {
+    tree := trie.DefaultTrie()
+    tree.Insert("hello")
+    tree.Search("hello") // true
+    tree.Search("hellooo") // false
+    tree.Search("hel") // false
+    tree.StartsWith("hel") //true
+
+    // support Unicode string
+    tree.Insert("你好")
+    tree.Search("你好") // true
+    tree.Search("你好啊") // false
+    tree.Search("你") // false
+    tree.StartsWith("你") //true
+}
+```
 
 ## What does godan mean?
 'Godan' is pronounced like "狗蛋" (Dog egg) in Chinese, which happens to be the name of my son.

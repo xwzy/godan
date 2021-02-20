@@ -1,5 +1,7 @@
 package trie
 
+import "sync"
+
 type trieNode struct {
 	nodes map[rune]*trieNode
 	isEnd bool
@@ -7,6 +9,7 @@ type trieNode struct {
 
 type Trie struct {
 	root *trieNode
+	mu   sync.Mutex
 }
 
 func DefaultTrie() *Trie {
@@ -32,10 +35,12 @@ func (t *Trie) Insert(word string) {
 	ptr := t.root
 	for idx, item := range charList {
 		if _, ok := ptr.nodes[item]; !ok {
+			t.mu.Lock()
 			ptr.nodes[item] = &trieNode{
 				nodes: make(map[rune]*trieNode, 0),
 				isEnd: false,
 			}
+			t.mu.Unlock()
 		}
 		ptr = ptr.nodes[item]
 		if idx == len(charList)-1 {
