@@ -57,3 +57,11 @@ func (s *Set) Difference(s1 *Set) *Set {
 	}
 	return res
 }
+
+func (s *Set) ToSLice() []interface{} {
+	res := make([]interface{}, 0)
+	for k, _ := range s.data {
+		res = append(res, k)
+	}
+	return res
+}
