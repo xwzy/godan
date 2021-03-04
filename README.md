@@ -9,6 +9,7 @@ Data structures implementation in golang.
 - [x] Queue
 - [x] Deque
 - [x] Vector
+- [x] Set
 - [ ] List
 - [ ] Heap / Priority Queue
 - [ ] Cache (FIFO / LRU / LFU)
@@ -172,6 +173,25 @@ func main()  {
     vec.Empty()   // false
     vec.Clear()
     vec.Empty()   // true
+}
+```
+
+## Set
+```go
+package set
+
+import "github.com/xwzy/godan/set"
+
+func main() {
+	s1 := DefaultSet()
+	s2 := DefaultSet()
+
+	s1.Add(1)
+	s2.Add(2)
+	s1.Add(3)
+	s2.Add(3)
+
+	s1.InterSection(s2).Exist(3) // true
 }
 ```
 
