@@ -1,7 +1,7 @@
 package set
 
 type Set struct {
-	Data map[interface{}]struct{}
+	data map[interface{}]struct{}
 }
 
 func DefaultSet() *Set {
