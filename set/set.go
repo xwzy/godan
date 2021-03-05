@@ -65,3 +65,11 @@ func (s *Set) ToSLice() []interface{} {
 	}
 	return res
 }
+
+func (s *Set) ToSLiceUInt64() []uint64 {
+	res := make([]uint64, 0)
+	for k, _ := range s.data {
+		res = append(res, k.(uint64))
+	}
+	return res
+}
