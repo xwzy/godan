@@ -1,5 +1,5 @@
 # godan
-Data structures implementation in golang.
+Data structures and utils in golang.
 
 - [x] Bloom Filter (Thread Safe)
 - [x] Ring Buffer (A buffer store the most recent data) (Thread Safe)
